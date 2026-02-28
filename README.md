@@ -30,12 +30,12 @@ To keep the dashboard helpful for non-technical users, we calculate a "Global He
 
 ## Running the Application
 
-Because reading S.M.A.R.T. data directly from a disk requires high-level system permissions, you must run the application as an administrator:
+To run the application, you can download the binary corresponding to your system from the releases. Because reading S.M.A.R.T. data directly from a disk requires high-level system permissions, you must execute it as an administrator:
 
 ```bash
 # Start the interactive disk selection menu
-sudo ./disk-analyzer
+sudo ./simple-disk-analyzer
 
 # Alternatively, jump directly to a specific disk dashboard
-sudo ./disk-analyzer analyze /dev/disk0
+sudo ./simple-disk-analyzer analyze /dev/disk0
 ```
