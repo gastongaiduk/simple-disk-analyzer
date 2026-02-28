@@ -1,0 +1,4 @@
+.agent/
+.agents/
+skills-lock.json
+disk-analyzer
