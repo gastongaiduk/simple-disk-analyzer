@@ -32,10 +32,26 @@ To keep the dashboard helpful for non-technical users, we calculate a "Global He
 
 To run the application, you can download the binary corresponding to your system from the releases. Because reading S.M.A.R.T. data directly from a disk requires high-level system permissions, you must execute it as an administrator:
 
-```bash
-# Start the interactive disk selection menu
-sudo ./simple-disk-analyzer
+### Using the Interactive Selection Menu
 
-# Alternatively, jump directly to a specific disk dashboard
-sudo ./simple-disk-analyzer analyze /dev/disk0
+Start the application without arguments to launch the interactive disk selection menu. Here, you can navigate your connected disks and pick one to analyze:
+
+```bash
+sudo ./simple-disk-analyzer
 ```
+
+![Disk Selection Menu](./screenshots/selection-menu.jpeg)
+
+Once you select a disk, it will load the health dashboard for that specific drive:
+
+![Health Dashboard](./screenshots/analyze-after-selection.jpeg)
+
+### Analyzing a specific disk directly
+
+Alternatively, you can skip the selection menu and jump straight into the dashboard by providing the path to a specific disk:
+
+```bash
+sudo ./simple-disk-analyzer analyze /dev/disk1
+```
+
+![CLI Analyze](./screenshots/analyze.jpeg)
