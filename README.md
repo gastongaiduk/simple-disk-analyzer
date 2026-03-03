@@ -28,6 +28,14 @@ To keep the dashboard helpful for non-technical users, we calculate a "Global He
 - **[Lipgloss](https://github.com/charmbracelet/lipgloss)**: Takes care of styling, colors, and the presentation of the UI.
 - **[smartmontools](https://www.smartmontools.org/)**: External system dependency used to read raw disk data.
 
+## Building Locally
+
+To build the application locally, first ensure you have [Go](https://go.dev/) installed. Then, fetch the dependencies and compile the binary:
+
+```bash
+go mod tidy && go build -o simple-disk-analyzer
+```
+
 ## Running the Application
 
 To run the application, you can download the binary corresponding to your system from the releases. Because reading S.M.A.R.T. data directly from a disk requires high-level system permissions, you must execute it as an administrator:
